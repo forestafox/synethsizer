@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic'
 import Header from '@/config'
 import Layout from '@/components/dom/Layout'
 import '@/styles/index.css'
+import { ThemeProvider } from '@/context/themeProvider'
 
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: true })
 
@@ -10,6 +11,8 @@ export default function App({ Component, pageProps = { title: 'index' } }) {
   const ref = useRef()
   return (
     <>
+    <ThemeProvider>
+      
       <Header title={pageProps.title} />
       <Layout ref={ref}>
         <Component {...pageProps} />
@@ -22,6 +25,7 @@ export default function App({ Component, pageProps = { title: 'index' } }) {
           </Scene>
         )}
       </Layout>
+    </ThemeProvider>
     </>
   )
 }

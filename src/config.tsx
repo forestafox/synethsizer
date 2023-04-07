@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-const titleDefault = 'React Three Next Starter'
-const url = 'https://react-three-next.vercel.app/'
-const description = 'The easiest and fastest way to create a 3D website using React Three Fiber and NextJS'
-const author = 'Author'
+const titleDefault = 'Synethsizer'
+const url = 'https://synethsizer.com/'
+const description = 'The mesmerizing 3D audio visualizer'
+const author = 'forestheims'
 
 export default function Header({ title = titleDefault }) {
   return (
@@ -21,7 +21,7 @@ export default function Header({ title = titleDefault }) {
       <meta name='description' content={description} />
       <meta
         name='keywords'
-        content='Software Engineer,Product Manager,Project Manager,Data Scientist,Computer Scientist'
+        content='Audio Visualizer,Music Visualizer,'
       />
       <meta name='robots' content='index,follow' />
       <meta name='distribution' content='web' />
@@ -54,8 +54,17 @@ export default function Header({ title = titleDefault }) {
       Twitter Summary card
         documentation: https://dev.twitter.com/cards/getting-started
         Be sure validate your Twitter card markup on the documentation site. */}
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:site' content='@onirenaud' />
+      {/* <meta name='twitter:card' content='summary' />
+      <meta name='twitter:site' content='@onirenaud' /> */}
+
+      {/* Umami Analytics */}
+          {/* <script
+      async
+      defer
+      data-do-not-track="true"
+      data-website-id="296bc91c-367b-42db-8cd9-3ef759c86c55"
+      src="https://forestheims.herokuapp.com/umami.js"
+    ></script> */}
     </Head>
   )
 }
