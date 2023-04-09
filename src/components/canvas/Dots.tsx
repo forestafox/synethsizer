@@ -6,7 +6,8 @@ export default function Dots({  ...props }) {
   
   const mesh = useRef(null)
 
-  const multiplier = useThemeStore((state) => state.multiplier)
+  const theme = useThemeStore((state) => state.theme);
+  const { multiplier } = theme;
 
   const mapArray = new Array(multiplier).fill('');
 

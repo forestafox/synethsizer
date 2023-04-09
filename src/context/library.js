@@ -3,7 +3,7 @@ export const themes = {
     multiplier: 90,
     glowing: 0,
     trailing: 0,
-    inverseSpeed: 2000,
+    inverseSpeed: 20,
     themeX: (ndex, multiplier, num) =>
       Math.cos((2 * Math.PI * ndex) / multiplier + num) * 2,
     themeY: (ndex, multiplier, num) =>
@@ -12,7 +12,7 @@ export const themes = {
   },
   Spirals: {
     multiplier: 60,
-    inverseSpeed: 800,
+    inverseSpeed: 8,
     glowing: 0,
     trailing: 0,
     themeX: (ndex, multiplier, num) =>
@@ -24,7 +24,7 @@ export const themes = {
   },
   Gathering: {
     multiplier: 33,
-    inverseSpeed: 333,
+    inverseSpeed: 3,
     glowing: 0,
     trailing: 0,
     themeX: (ndex, multiplier, num) => Math.cos(num * (ndex + 1)),
@@ -35,7 +35,7 @@ export const themes = {
   },
   Intersection: {
     multiplier: 33,
-    inverseSpeed: 1369,
+    inverseSpeed: 13,
     glowing: 0,
     trailing: 0,
     themeX: (ndex, multiplier, num) => Math.tan(num * (ndex + 1)),
@@ -46,7 +46,7 @@ export const themes = {
   },
   Path: {
     multiplier: 34,
-    inverseSpeed: 340,
+    inverseSpeed: 4,
     glowing: 0,
     trailing: 0,
     themeX: (ndex, multiplier, num) => 3 * Math.sin(num * (ndex + 1)),

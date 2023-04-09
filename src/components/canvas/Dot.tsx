@@ -1,30 +1,37 @@
 import * as THREE from 'three'
 import { useMemo, useRef, useState } from 'react'
-import { useRouter } from 'next/router'
 import { useFrame } from '@react-three/fiber'
 import { Line, useCursor } from '@react-three/drei'
-import { useTheme } from '../../context/themeProvider.jsx'
+import { useThemeStore } from '@/zustand/themeStore.ts'
 
 export default function Dot(props) {
   const ref = useRef();
 
     const [dotColor, setDotColor] = useState('black');
+    const { theme, num, setNum, color, forward, playing } = useThemeStore(
+      (state) => (
+        {
+          theme: state.theme,
+          num: state.num,
+          setNum: state.setNum,
+          color: state.color,
+          forward: state.forward,
+          playing: state.playing
+        })
+      );
 
-
-  const { theme, num, setNum, playing, forward, playPause, color } =
-  useTheme();
-const { multiplier, toneClicked, themeX, themeY, themeZ, inverseSpeed } =
+const { multiplier, themeX, themeY, themeZ, inverseSpeed } =
   theme;
 
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime();
 
       const { ndex } = props;
-    setNum((num) =>
+    
       forward
-        ? num + (playing ? delta : 0) / inverseSpeed
-        : num - (playing ? delta : 0) / inverseSpeed
-    );
+        ? setNum(num + (playing ? delta : 0) / inverseSpeed)
+        : setNum(num - (playing ? delta : 0) / inverseSpeed)
+        ;
     const x = themeX(ndex, multiplier, num);
     const y = themeY(ndex, multiplier, num);
     const z = themeZ(ndex, multiplier, num);
@@ -55,7 +62,7 @@ const { multiplier, toneClicked, themeX, themeY, themeZ, inverseSpeed } =
       if (zy < 0) setDotColor(`rgb(0,0,0)`);
     }
 
-
+    
     ref.current.position.x = x;
     ref.current.position.y = y;
     ref.current.position.z = z;
