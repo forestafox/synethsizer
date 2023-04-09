@@ -5,7 +5,7 @@ import { Line, useCursor } from '@react-three/drei'
 import { useThemeStore } from '@/zustand/themeStore.ts'
 
 export default function Dot(props) {
-  const ref = useRef();
+  const ref = useRef<any>();
 
     const [dotColor, setDotColor] = useState('black');
     const { theme, num, setNum, color, forward, playing } = useThemeStore(
