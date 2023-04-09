@@ -1,4 +1,5 @@
 import AudioControls from '@/components/dom/AudioControls';
+import { useThemeStore } from '@/zustand/themeStore';
 import dynamic from 'next/dynamic'
 
 // Dynamic import is used to prevent a payload when the website starts, that includes threejs, r3f etc..
@@ -10,12 +11,15 @@ const Dots = dynamic(() => import('@/components/canvas/Dots'), { ssr: false })
 
 // Dom components go here
 export default function Page(props) {
+  
+  const bears = useThemeStore((state) => state.bears);
+
   return (
     <>
       <header className='flex justify-between bg-purple-800'>
         <h1 className='text-lg'>Synethsizer</h1>
         <h2>Play / Pause</h2>
-        <h2>Reverse</h2>
+        <h2>Bears: {bears}</h2>
         <h2>Previous</h2>
         <h2>Next</h2>
       </header>
