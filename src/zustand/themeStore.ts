@@ -21,11 +21,12 @@ interface ThemeState {
 export const useThemeStore = create<ThemeState>()((set) => ({
   bears: 0,
   color: 'orange',
-  multiplier: 90,
   theme: themes.Harmony,
   increase: (by) => set((state) => ({ bears: state.bears + by })),
   num: 0,
   setNum: (to) => set((state) => ({ num: to })),
   forward: true,
   playing: true,
+  increaseSpeed: () => set(() => ({ theme: { multiplier: theme.multiplier--, ...theme} })),
+  decreaseSpeed: () => set(() => ({ theme: lastName })),
 }))

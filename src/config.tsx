@@ -17,7 +17,7 @@ export default function Header({ title = titleDefault }) {
       <meta name='publisher' content={author} />
 
       {/* Search Engine Optimization Meta Tags */}
-      <title>{title}</title>
+      <title>Synethsizer</title>
       <meta name='description' content={description} />
       <meta
         name='keywords'

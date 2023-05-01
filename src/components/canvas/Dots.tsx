@@ -12,7 +12,7 @@ export default function Dots({  ...props }) {
   const mapArray = new Array(multiplier).fill('');
 
   return (
-    <group ref={mesh} {...props}>
+    <group ref={mesh} {...props} rotation={[0.2,0,0]} position={[0,0.91,0]}>
       {mapArray.map((each, i) => {
         return <Dot ndex={i} key={i} />
       })}
