@@ -12,34 +12,38 @@ const Dots = dynamic(() => import('@/components/canvas/Dots'), { ssr: false })
 // Dom components go here
 export default function Page(props) {
   
-  const theme = useThemeStore((state) => state.theme);
 
-  // const [firstName, updateFirstName] = useThemeStore(
-  //   (state) => [state.firstName, state.updateFirstName],
-  //   shallow
-  // )
+  const [inverseSpeed, setInverseSpeed] = useThemeStore(
+    (state) => [state.inverseSpeed, state.setInverseSpeed]
+  )
+
+  const [multiplier, setMultiplier] = useThemeStore(
+    (state) => [state.multiplier, state.setMultiplier]
+  )
 
 
   return (
     <>
-      <header className='flex items-center  justify-between bg-purple-800'>
+      <header className='flex items-center  justify-around bg-purple-800'>
         <h1 className='text-lg'>Synethsizer</h1>
         <h2>Harmonic Pendulum</h2>
-        <h2>Play / Pause</h2>
-        <div className='flex items-center'>
+        <h2>
+          <button>Play / Pause</button>  
+        </h2>
+        <div className='flex items-center gap-2'>
           <h2>
-            Particles: {theme.multiplier}
+            Particles: {multiplier}
           </h2>
           <div className='flex flex-col'>
-            <button className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDown={() => setMultiplier(multiplier+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => setMultiplier(multiplier-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
-        <div className='flex items-center'>
-          <h2>Inverse Speed: {theme.inverseSpeed}</h2>
+        <div className='flex items-center gap-2'>
+          <h2>Inverse Speed: {inverseSpeed}</h2>
           <div className='flex flex-col'>
-            <button className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => setInverseSpeed(inverseSpeed-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
       </header>

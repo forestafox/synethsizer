@@ -8,20 +8,21 @@ export default function Dot(props) {
   const ref = useRef<any>();
 
     const [dotColor, setDotColor] = useState('black');
-    const { theme, num, setNum, color, forward, playing } = useThemeStore(
+    const { num, setNum, color, forward, playing, multiplier, themeX, themeY, themeZ, inverseSpeed } = useThemeStore(
       (state) => (
         {
-          theme: state.theme,
           num: state.num,
           setNum: state.setNum,
           color: state.color,
           forward: state.forward,
-          playing: state.playing
+          playing: state.playing,
+          multiplier: state.multiplier,
+          themeX: state.themeX,
+          themeY: state.themeY,
+          themeZ: state.themeZ,
+          inverseSpeed: state.inverseSpeed
         })
       );
-
-const { multiplier, themeX, themeY, themeZ, inverseSpeed } =
-  theme;
 
   useFrame((state, delta) => {
     const t = state.clock.getElapsedTime();
