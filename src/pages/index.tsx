@@ -21,14 +21,29 @@ export default function Page(props) {
     (state) => [state.multiplier, state.setMultiplier]
   )
 
+  const [playing, setPlaying] = useThemeStore(
+    (state) => [state.playing, state.setPlaying]
+  )
+
+  const [color, setColor] = useThemeStore(
+    (state) => [state.color, state.setColor]
+  )
+
 
   return (
     <>
       <header className='flex items-center  justify-around bg-purple-800'>
         <h1 className='text-lg'>Synethsizer</h1>
-        <h2>Harmonic Pendulum</h2>
+        <div className='flex gap-1'>
+          <h2>Harmonic Pendulum - {color}</h2>
+          <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
+            <option className='' value="Orange">Orange</option>
+            <option className='' value="Rainbow">Rainbow</option>
+            <option className='' value="Flashing">Flashing</option>
+          </select>
+        </div>
         <h2>
-          <button>Play / Pause</button>  
+          {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500  p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
         </h2>
         <div className='flex items-center gap-2'>
           <h2>

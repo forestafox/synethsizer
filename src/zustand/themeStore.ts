@@ -12,12 +12,14 @@ interface ThemeState {
   setNum: (to: number) => void
   forward: boolean
   playing: boolean
+  setPlaying: (current: boolean) => void
+  setColor: (selection: string) => void
   setMultiplier: (current: number) => void
   setInverseSpeed: (current: number) => void
 }
 
 export const useThemeStore = create<ThemeState>()((set) => ({
-  color: 'orange',
+  color: 'Orange',
   multiplier: 90,
   inverseSpeed: 20,
   themeX: (ndex, multiplier, num) =>
@@ -31,4 +33,6 @@ export const useThemeStore = create<ThemeState>()((set) => ({
   playing: true,
   setMultiplier: (current) => set(() => ({ multiplier: current })),
   setInverseSpeed: (current) => set(() => ({ inverseSpeed: current })),
+  setPlaying: (current) => set(() => ({ playing: current })),
+  setColor: (selection) => set(() => ({ color: selection })),
 }))
