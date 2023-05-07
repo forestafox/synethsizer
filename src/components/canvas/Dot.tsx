@@ -7,7 +7,7 @@ import { useThemeStore } from '@/zustand/themeStore.ts'
 export default function Dot(props) {
   const ref = useRef<any>();
 
-    // const [dotColor, setDotColor] = useState('black');
+    const [dotColor, setDotColor] = useState('black');
     const { num, setNum, color, setColor, forward, playing, multiplier, themeX, themeY, themeZ, inverseSpeed } = useThemeStore(
       (state) => (
         {
@@ -43,7 +43,7 @@ export default function Dot(props) {
     let b;
 
     if (color === 'Orange') {
-        setColor('orange');
+        setDotColor('orange');
     } else if (color === 'Rainbow') {
       r = Math.round(z * 128 + 128);
       g = Math.round(z * 128 + (y * 128 + 128));
@@ -55,14 +55,14 @@ export default function Dot(props) {
       if (g < 0) g = 0;
       if (b > 255) b = 255;
       if (b < 0) b = 0;
-      // setDotColor(`rgb(${r},${g},${b})`);
-      setColor(`rgb(${r},${g},${b})`);
-    } else if (color === 'Flashing') {
+      setDotColor(`rgb(${r},${g},${b})`);
+      // setColor(`rgb(${r},${g},${b})`);
+    } else if (color === 'Blinking') {
       let zy = z * 192 + 128;
-      // if (zy > 255) setDotColor(`rgb(255,0,0)`);
-      // if (zy < 0) setDotColor(`rgb(0,0,0)`);
-      if (zy > 255) setColor(`rgb(255,0,0)`);
-      if (zy < 0) setColor(`rgb(0,0,0)`);
+      if (zy > 255) setDotColor(`rgb(255,0,0)`);
+      if (zy < 0) setDotColor(`rgb(0,0,0)`);
+      // if (zy > 255) setColor(`rgb(255,0,0)`);
+      // if (zy < 0) setColor(`rgb(0,0,0)`);
     }
 
     
@@ -75,7 +75,7 @@ export default function Dot(props) {
   return (
       <mesh {...props} ref={ref} onClick={() => {}} onPointerOver={() => {}} onPointerOut={() => {}}>
         <sphereGeometry args={[0.066, 19, 19]} />
-        <meshPhysicalMaterial roughness={0} color={color} />
+        <meshPhysicalMaterial roughness={0} color={dotColor} />
       </mesh>
   )
 }

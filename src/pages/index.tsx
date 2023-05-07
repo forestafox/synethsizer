@@ -29,6 +29,10 @@ export default function Page(props) {
     (state) => [state.color, state.setColor]
   )
 
+  const [forward, setForward] = useThemeStore(
+    (state) => [state.forward, state.setForward]
+  )
+
 
   return (
     <>
@@ -39,12 +43,17 @@ export default function Page(props) {
           <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
             <option className='' value="Orange">Orange</option>
             <option className='' value="Rainbow">Rainbow</option>
-            <option className='' value="Flashing">Flashing</option>
+            <option className='' value="Blinking">Blinking</option>
           </select>
         </div>
-        <h2>
-          {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500  p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
-        </h2>
+        <div className='flex gap-1'>
+          <h2>
+            {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500  p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
+          </h2>
+          <h2>
+            {forward ? <button className='w-16 rounded bg-rose-500 p-1' onClick={() => setForward(false)}>Reverse</button> : <button className='w-16 rounded bg-lime-500  p-1' onClick={() => setForward(true)}>Forward</button>}  
+          </h2>
+        </div>
         <div className='flex items-center gap-2'>
           <h2>
             Particles: {multiplier}
