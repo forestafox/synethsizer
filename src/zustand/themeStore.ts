@@ -24,11 +24,11 @@ export const useThemeStore = create<ThemeState>()((set) => ({
   inverseSpeed: 20,
   forward: true,
   playing: true,
-  themeX: (ndex, multiplier, num) =>
-    Math.cos((2 * Math.PI * ndex) / multiplier + num) * 2,
-  themeY: (ndex, multiplier, num) =>
-    Math.sin((2 * Math.PI * ndex) / multiplier + num) * 2,
-  themeZ: (ndex, multiplier, num) => Math.sin(num * (ndex + 1)),
+  themeX: (i, multiplier, num) =>
+    Math.cos((2 * Math.PI * i) / multiplier + num) * 2,
+  themeY: (i, multiplier, num) =>
+    Math.sin((2 * Math.PI * i) / multiplier + num) * 2,
+  themeZ: (i, multiplier, num) => Math.sin(num * (i + 1)),
   num: 0,
   setNum: (to) => set((state) => ({ num: to })),
   setPlaying: (current) => set(() => ({ playing: current })),

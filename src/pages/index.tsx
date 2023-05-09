@@ -2,7 +2,7 @@ import AudioControls from '@/components/dom/AudioControls';
 import { useThemeStore } from '@/zustand/themeStore';
 import dynamic from 'next/dynamic'
 
-// Dynamic import is used to prevent a payload when the website starts, that includes threejs, r3f etc..
+// Dynamic import is used to prevent a payload when the website starts, that includes three.js, r3f etc..
 // WARNING ! errors might get obfuscated by using dynamic import.
 // If something goes wrong go back to a static import to show the error.
 // https://github.com/pmndrs/react-three-next/issues/49
@@ -48,10 +48,10 @@ export default function Page(props) {
         </div>
         <div className='flex gap-1'>
           <h2>
-            {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500  p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
+            {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500 p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
           </h2>
           <h2>
-            {forward ? <button className='w-16 rounded bg-rose-500 p-1' onClick={() => setForward(false)}>Reverse</button> : <button className='w-16 rounded bg-lime-500  p-1' onClick={() => setForward(true)}>Forward</button>}  
+            {forward ? <button className='w-16 rounded bg-lime-500 p-1' onClick={() => setForward(false)}>Reverse</button> : <button className='w-16 rounded bg-rose-500 p-1' onClick={() => setForward(true)}>Forward</button>}  
           </h2>
         </div>
         <div className='flex items-center gap-2'>
