@@ -8,13 +8,12 @@ export default function Dot(props) {
   const ref = useRef<any>();
 
     const [dotColor, setDotColor] = useState('black');
-    const { num, setNum, color, setColor, forward, playing, multiplier, themeX, themeY, themeZ, inverseSpeed } = useThemeStore(
+    const { num, setNum, color, forward, playing, multiplier, themeX, themeY, themeZ, inverseSpeed } = useThemeStore(
       (state) => (
         {
           num: state.num,
           setNum: state.setNum,
           color: state.color,
-          setColor: state.setColor,
           forward: state.forward,
           playing: state.playing,
           multiplier: state.multiplier,
@@ -56,13 +55,10 @@ export default function Dot(props) {
       if (b > 255) b = 255;
       if (b < 0) b = 0;
       setDotColor(`rgb(${r},${g},${b})`);
-      // setColor(`rgb(${r},${g},${b})`);
     } else if (color === 'Blinking') {
       let zy = z * 192 + 128;
       if (zy > 255) setDotColor(`rgb(255,0,0)`);
       if (zy < 0) setDotColor(`rgb(0,0,0)`);
-      // if (zy > 255) setColor(`rgb(255,0,0)`);
-      // if (zy < 0) setColor(`rgb(0,0,0)`);
     }
 
     

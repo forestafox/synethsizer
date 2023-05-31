@@ -36,10 +36,10 @@ export default function Page(props) {
 
   return (
     <>
-      <header className='flex items-center  justify-around bg-purple-800'>
+      <header className='flex flex-wrap  items-center justify-around gap-1 bg-purple-800 p-1'>
         <h1 className='text-lg'>Synethsizer</h1>
         <div className='flex gap-1'>
-          <h2>Harmonic Pendulum - {color}</h2>
+          <h2>Harmonic Pendulum</h2>
           <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
             <option className='' value="Orange">Orange</option>
             <option className='' value="Rainbow">Rainbow</option>
