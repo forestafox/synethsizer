@@ -58,13 +58,13 @@ export default function Header({ title = titleDefault }) {
       <meta name='twitter:site' content='@onirenaud' /> */}
 
       {/* Umami Analytics */}
-          {/* <script
+        <script
       async
       defer
       data-do-not-track="true"
       data-website-id="296bc91c-367b-42db-8cd9-3ef759c86c55"
       src="https://forestheims.herokuapp.com/umami.js"
-    ></script> */}
+    ></script>
     </Head>
   )
 }
