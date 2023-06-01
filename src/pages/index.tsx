@@ -59,15 +59,15 @@ export default function Page(props) {
             Particles: {multiplier}
           </h2>
           <div className='flex flex-col'>
-            <button onMouseDown={() => setMultiplier(multiplier+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button onMouseDown={() => setMultiplier(multiplier-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDown={() => setMultiplier((multiplier===90?90:multiplier+1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => setMultiplier((multiplier===1?1:multiplier-1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
         <div className='flex items-center gap-2'>
           <h2>Inverse Speed: {inverseSpeed}</h2>
           <div className='flex flex-col'>
-            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button onMouseDown={() => setInverseSpeed(inverseSpeed-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed===90?90:inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => setInverseSpeed(inverseSpeed===1?1:inverseSpeed-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
       </header>
