@@ -1,11 +1,11 @@
 import Head from 'next/head'
 
-const titleDefault = 'Synethsizer'
+const title = 'Synethsizer'
 const url = 'https://synethsizer.com/'
-const description = 'The mesmerizing 3D audio visualizer'
-const author = 'forestheims'
+const description = 'A mesmerizing 3D visual synthesizer'
+const author = '[forestheims]'
 
-export default function Header({ title = titleDefault }) {
+export default function Header() {
   return (
     <Head>
       {/* Recommended Meta Tags */}
@@ -31,7 +31,7 @@ export default function Header({ title = titleDefault }) {
       <meta property='og:title' content={title} />
       <meta property='og:type' content='site' />
       <meta property='og:url' content={url} />
-      <meta property='og:image' content={'/icons/share.png'} />
+      <meta property='og:image' content={'/img/synethsizer_front.PNG'} />
       <meta property='og:site_name' content={title} />
       <meta property='og:description' content={description} />
 
