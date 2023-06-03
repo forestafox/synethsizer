@@ -83,10 +83,12 @@
 
 Intent:
 
-- Enjoy!
-- Create something new with this template repo!
+- Create something I enjoy, that I can share with others!
+- Create this as a template repo for others to create and share 3D animations online!
 
-This is a a refactoring / re-creation of a JavaScript [previous project](https://github.com/forestheims/synethsizer-prev) I was working on. I decided to learn and utilize some of the "current and modern" web dev libraries I had not explored yet, such as Next.js, Zustand, react-three-fibre, Tailwind, and TypeScript.
+This is a a refactoring / re-creation of a [previous project](https://github.com/forestheims/synethsizer-prev) I was working on in JavaScript, using reacts context hook for state management.
+
+I decided to learn and utilize some of the "current and modern" web dev frameworks and libraries I had not explored yet, such as Next.js, Zustand, react-three-fibre, Tailwind, and TypeScript.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,8 +145,8 @@ Things you need to use the software and how to install them.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
-
-<!-- ## Usage
+<!--
+## Usage
 
 Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
 
@@ -156,6 +158,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 ## Roadmap
 
+- [x] Harmonic Oscillator re-created
+- [x] Controls use Zustand for state management.
+- [x] Rainbow color mode
 - [ ] Audio responsiveness
   - [ ] Request access to client microphone
     - [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
@@ -201,13 +206,13 @@ Project Link: [https://github.com/forestheims/synethsizer](https://github.com/fo
 
 <!-- ACKNOWLEDGMENTS -->
 
-<!-- ## Acknowledgments
+## Acknowledgments
 
 - []()
 - []()
 - []()
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
