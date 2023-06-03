@@ -43,8 +43,8 @@ export default function Page(props) {
         <div className='flex gap-1'>
           <h2>Harmonic Pendulum</h2>
           <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
-            <option className='' value="Orange">Orange</option>
             <option className='' value="Rainbow">Rainbow</option>
+            <option className='' value="Orange">Orange</option>
             <option className='' value="Blinking">Blinking</option>
           </select>
         </div>
