@@ -37,7 +37,9 @@ export default function Page(props) {
   return (
     <>
       <header className='flex flex-wrap  items-center justify-around gap-1 bg-purple-800 p-1'>
-        <h1 className='text-lg'>Synethsizer</h1>
+        <a href="https://github.com/forestheims/synethsizer" target='_blank' rel="opener author">
+          <h1 className='cursor-pointer text-lg font-bold text-lime-400'>Synethsizer</h1>
+        </a>
         <div className='flex gap-1'>
           <h2>Harmonic Pendulum</h2>
           <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
@@ -59,14 +61,14 @@ export default function Page(props) {
             Particles: {multiplier}
           </h2>
           <div className='flex flex-col'>
-            <button onMouseDown={() => setMultiplier((multiplier===90?90:multiplier+1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => setMultiplier((multiplier===99?99:multiplier+1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
             <button onMouseDown={() => setMultiplier((multiplier===1?1:multiplier-1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
         <div className='flex items-center gap-2'>
           <h2>Inverse Speed: {inverseSpeed}</h2>
           <div className='flex flex-col'>
-            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed===90?90:inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed===99?99:inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
             <button onMouseDown={() => setInverseSpeed(inverseSpeed===1?1:inverseSpeed-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>

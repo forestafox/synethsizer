@@ -234,5 +234,9 @@ Project Link: [https://github.com/forestheims/synethsizer](https://github.com/fo
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
-[React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
-[React-url]: https://github.com/pmndrs/zustand
+[Zustand]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Zustand-url]: https://github.com/pmndrs/zustand
+[Tailwind.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Tailwind-url]: https://tailwindcss.com/
+[Three.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
+[Three-url]: https://threejs.org/
