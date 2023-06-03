@@ -20,8 +20,8 @@ interface ThemeState {
 
 export const useThemeStore = create<ThemeState>()((set) => ({
   color: 'Rainbow',
-  multiplier: 77,
-  inverseSpeed: 10,
+  multiplier: 91,
+  inverseSpeed: 26,
   forward: true,
   playing: true,
   themeX: (i, multiplier, num) =>
