@@ -58,7 +58,10 @@ export default function Header() {
       {/* <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content='@onirenaud' /> */}
 
-      {/* Umami Analytics */}
+      {/* Umami Analytics 
+        REMOVE THIS <script> if you use this repo as a template for your
+        creating with three.js
+      */}
         <script
       async
       defer

@@ -1,6 +1,7 @@
 import AudioControls from '@/components/dom/AudioControls';
 import { useThemeStore } from '@/zustand/themeStore';
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
+
 
 // Dynamic import is used to prevent a payload when the website starts, that includes three.js, r3f etc..
 // WARNING ! errors might get obfuscated by using dynamic import.
@@ -33,6 +34,51 @@ export default function Page(props) {
     (state) => [state.forward, state.setForward]
   )
 
+  const pauseHandler = () => {
+    setPlaying(false);
+    umami.trackEvent('pause'); // remove this line if you use this repo as a template
+  }
+
+  const playHandler = () => {
+    setPlaying(true);
+    umami.trackEvent('play'); // remove this line if you use this repo as a template
+  }
+
+  const colorHandler = (e) => {
+    setColor(e.target.value);
+    umami.trackEvent(e.target.value); // remove this line if you use this repo as a template
+  }
+
+  const forwardHandler = () => {
+    setForward(true);
+    umami.trackEvent('forward'); // remove this line if you use this repo as a template
+  }
+
+  const reverseHandler = () => {
+    setForward(false);
+    umami.trackEvent('reverse'); // remove this line if you use this repo as a template
+  }
+
+  const speedUpHandler = () => {
+    setInverseSpeed(inverseSpeed===99?99:inverseSpeed+1);
+    umami.trackEvent('faster'); // remove this line if you use this repo as a template
+  }
+
+  const speedDownHandler = () => {
+    setInverseSpeed(inverseSpeed===1?1:inverseSpeed-1);
+    umami.trackEvent('slower'); // remove this line if you use this repo as a template
+  }
+
+  const particleNumberUpHandler = () => {
+    setMultiplier((multiplier===99?99:multiplier+1));
+    umami.trackEvent('more dots'); // remove this line if you use this repo as a template
+  }
+
+  const particleNumberDownHandler = () => {
+    setMultiplier((multiplier===1?1:multiplier-1));
+    umami.trackEvent('less dots'); // remove this line if you use this repo as a template
+  }
+
 
   return (
     <>
@@ -42,7 +88,7 @@ export default function Page(props) {
         </a>
         <div className='flex gap-1'>
           <h2>Harmonic Pendulum</h2>
-          <select onChange={(e) => setColor(e.target.value)} className='rounded bg-purple-400 p-1' name="color" id="color">
+          <select onChange={(e) => colorHandler(e)} className='rounded bg-purple-400 p-1' name="color" id="color">
             <option className='' value="Rainbow">Rainbow</option>
             <option className='' value="Orange">Orange</option>
             <option className='' value="Blinking">Blinking</option>
@@ -50,10 +96,10 @@ export default function Page(props) {
         </div>
         <div className='flex gap-1'>
           <h2>
-            {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => setPlaying(false)}>Pause</button> : <button className='w-12 rounded bg-lime-500 p-1' onClick={() => setPlaying(true)}>Play{' '}</button>}  
+            {playing ? <button className='w-12 rounded bg-rose-500 p-1' onClick={() => pauseHandler()}>Pause</button> : <button className='w-12 rounded bg-lime-500 p-1' onClick={() => playHandler()}>Play{' '}</button>}  
           </h2>
           <h2>
-            {forward ? <button className='w-16 rounded bg-lime-500 p-1' onClick={() => setForward(false)}>Reverse</button> : <button className='w-16 rounded bg-rose-500 p-1' onClick={() => setForward(true)}>Forward</button>}  
+            {forward ? <button className='w-16 rounded bg-lime-500 p-1' onClick={() => reverseHandler()}>Reverse</button> : <button className='w-16 rounded bg-rose-500 p-1' onClick={() => forwardHandler()}>Forward</button>}  
           </h2>
         </div>
         <div className='flex items-center gap-2'>
@@ -61,15 +107,15 @@ export default function Page(props) {
             Particles: {multiplier}
           </h2>
           <div className='flex flex-col'>
-            <button onMouseDown={() => setMultiplier((multiplier===99?99:multiplier+1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button onMouseDown={() => setMultiplier((multiplier===1?1:multiplier-1))} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDown={() => particleNumberUpHandler()} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => particleNumberDownHandler()} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
         <div className='flex items-center gap-2'>
           <h2>Inverse Speed: {inverseSpeed}</h2>
           <div className='flex flex-col'>
-            <button onMouseDownCapture={() => setInverseSpeed(inverseSpeed===99?99:inverseSpeed+1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
-            <button onMouseDown={() => setInverseSpeed(inverseSpeed===1?1:inverseSpeed-1)} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
+            <button onMouseDown={() => speedUpHandler()} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Up</button>
+            <button onMouseDown={() => speedDownHandler()} className='flex justify-center rounded-xl font-bold text-lime-500 hover:bg-purple-600'>Down</button>
           </div>
         </div>
       </header>
