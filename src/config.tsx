@@ -58,17 +58,6 @@ export default function Header() {
       {/* <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content='@onirenaud' /> */}
 
-      {/* Umami Analytics 
-        REMOVE THIS <script> if you use this repo as a template for your
-        creating with three.js
-      */}
-        <script
-      async
-      defer
-      data-do-not-track="true"
-      data-website-id="296bc91c-367b-42db-8cd9-3ef759c86c55"
-      src="https://forestheims.herokuapp.com/umami.js"
-    ></script>
     </Head>
   )
 }

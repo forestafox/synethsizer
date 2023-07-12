@@ -36,47 +36,38 @@ export default function Page(props) {
 
   const pauseHandler = () => {
     setPlaying(false);
-    umami.trackEvent('pause'); // remove this line if you use this repo as a template
   }
 
   const playHandler = () => {
     setPlaying(true);
-    umami.trackEvent('play'); // remove this line if you use this repo as a template
   }
 
   const colorHandler = (e) => {
     setColor(e.target.value);
-    umami.trackEvent(e.target.value); // remove this line if you use this repo as a template
   }
 
   const forwardHandler = () => {
     setForward(true);
-    umami.trackEvent('forward'); // remove this line if you use this repo as a template
   }
 
   const reverseHandler = () => {
     setForward(false);
-    umami.trackEvent('reverse'); // remove this line if you use this repo as a template
   }
 
   const speedUpHandler = () => {
     setInverseSpeed(inverseSpeed===99?99:inverseSpeed+1);
-    umami.trackEvent('faster'); // remove this line if you use this repo as a template
   }
 
   const speedDownHandler = () => {
     setInverseSpeed(inverseSpeed===1?1:inverseSpeed-1);
-    umami.trackEvent('slower'); // remove this line if you use this repo as a template
   }
 
   const particleNumberUpHandler = () => {
     setMultiplier((multiplier===99?99:multiplier+1));
-    umami.trackEvent('more dots'); // remove this line if you use this repo as a template
   }
 
   const particleNumberDownHandler = () => {
     setMultiplier((multiplier===1?1:multiplier-1));
-    umami.trackEvent('less dots'); // remove this line if you use this repo as a template
   }
 
 
