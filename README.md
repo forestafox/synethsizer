@@ -29,7 +29,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/forestheims/synethsizer">
+  <a href="https://github.com/forestafox/synethsizer">
     <img src="public/icons/share.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -38,14 +38,14 @@
   <p align="center">
     A mesmerizing visual synthesizer.
     <br />
-    <a href="https://github.com/forestheims/synethsizer"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/forestafox/synethsizer"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/forestheims/synethsizer">View Demo</a>
+    <a href="https://github.com/forestafox/synethsizer">View Demo</a>
     ·
-    <a href="https://github.com/forestheims/synethsizer/issues">Report Bug</a>
+    <a href="https://github.com/forestafox/synethsizer/issues">Report Bug</a>
     ·
-    <a href="https://github.com/forestheims/synethsizer/issues">Request Feature</a>
+    <a href="https://github.com/forestafox/synethsizer/issues">Request Feature</a>
   </p>
 </div>
 
@@ -86,7 +86,7 @@ Intent:
 - Create something I enjoy, that I can share with others!
 - Create this as a template repo for others to create and share 3D animations online!
 
-This is a a refactoring / re-creation of a [previous project](https://github.com/forestheims/synethsizer-prev) I was working on in JavaScript, using reacts context hook for state management.
+This is a a refactoring / re-creation of a [previous project](https://github.com/forestafox/synethsizer-prev) I was working on in JavaScript, using reacts context hook for state management.
 
 I decided to learn and utilize some of the "current and modern" web dev frameworks and libraries I had not explored yet, such as Next.js, Zustand, react-three-fibre, Tailwind, and TypeScript.
 
@@ -123,7 +123,7 @@ Things you need to use the software and how to install them.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/forestheims/synethsizer.git
+   git clone https://github.com/forestafox/synethsizer.git
    ```
 2. Install NPM packages
    ```sh
@@ -165,7 +165,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Request access to client microphone
     - [Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Visualizations_with_Web_Audio_API)
 
-See the [open issues](https://github.com/forestheims/synethsizer/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/forestafox/synethsizer/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -198,9 +198,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 ## Contact
 
-Forest Heims - forestheims@gmail.com
-
-Project Link: [https://github.com/forestheims/synethsizer](https://github.com/forestheims/synethsizer)
+Project Link: [https://github.com/forestafox/synethsizer](https://github.com/forestafox/synethsizer)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -217,18 +215,18 @@ Project Link: [https://github.com/forestheims/synethsizer](https://github.com/fo
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/forestheims/synethsizer.svg?style=for-the-badge
-[contributors-url]: https://github.com/forestheims/synethsizer/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/forestheims/synethsizer.svg?style=for-the-badge
-[forks-url]: https://github.com/forestheims/synethsizer/network/members
-[stars-shield]: https://img.shields.io/github/stars/forestheims/synethsizer.svg?style=for-the-badge
-[stars-url]: https://github.com/forestheims/synethsizer/stargazers
-[issues-shield]: https://img.shields.io/github/issues/forestheims/synethsizer.svg?style=for-the-badge
-[issues-url]: https://github.com/forestheims/synethsizer/issues
-[license-shield]: https://img.shields.io/github/license/forestheims/synethsizer.svg?style=for-the-badge
-[license-url]: https://github.com/forestheims/synethsizer/blob/master/LICENSE.txt
+[contributors-shield]: https://img.shields.io/github/contributors/forestafox/synethsizer.svg?style=for-the-badge
+[contributors-url]: https://github.com/forestafox/synethsizer/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/forestafox/synethsizer.svg?style=for-the-badge
+[forks-url]: https://github.com/forestafox/synethsizer/network/members
+[stars-shield]: https://img.shields.io/github/stars/forestafox/synethsizer.svg?style=for-the-badge
+[stars-url]: https://github.com/forestafox/synethsizer/stargazers
+[issues-shield]: https://img.shields.io/github/issues/forestafox/synethsizer.svg?style=for-the-badge
+[issues-url]: https://github.com/forestafox/synethsizer/issues
+[license-shield]: https://img.shields.io/github/license/forestafox/synethsizer.svg?style=for-the-badge
+[license-url]: https://github.com/forestafox/synethsizer/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/forestheims
+[linkedin-url]: https://linkedin.com/in/foresth
 [product-screenshot]: public/img/synethsizer_front.PNG
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
