@@ -74,7 +74,7 @@ export default function Page(props) {
   return (
     <>
       <header className='flex flex-wrap  items-center justify-around gap-1 bg-purple-800 p-1'>
-        <a href="https://github.com/forestheims/synethsizer" target='_blank' rel="opener author">
+        <a href="https://github.com/forestafox/synethsizer" target='_blank' rel="opener author">
           <h1 className='cursor-pointer text-lg font-bold text-lime-400'>Synethsizer</h1>
         </a>
         <div className='flex gap-1'>
